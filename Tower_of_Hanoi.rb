@@ -34,53 +34,8 @@ tower.run(10)
 
 
 
-##############
+############ FIRST VERSION ##################
 
-
-
-
-# LETS GET READY TO RECURSE!!!!!!
-#
-# Tower of Hanoi
-#
-# You have 4 discs which vary in size from small to large
-# There are 3 pegs, A, B, C, respectively
-#
-# The discs are all currently on peg A, with the largest disc on the bottom,
-# and the smallest disc on the top.
-#
-#
-# |      - 1 -     |                 |                 |
-# |     -- 2 --    |                 |                 |
-# |    --- 3 ---   |                 |                 |
-# |   ---- 4 ----  |                 |                 |
-# _________A________________B_________________C_________
-#
-#
-# Get the discs from peg A to peg C.
-#
-# Rules:
-# - Only one disk may be moved at a time.
-# - Each move consists of taking the upper disk from one of the pegs and sliding
-#   it onto another peg, on top of the other disks that may already be present on that peg.
-# - No disk may be placed on top of a smaller disk (can't put disc 4 on top of disc 1).
-#
-# One method for setting this up might look like:
-#
-# a = [1,2,3,4]
-# b = [] # empty Array
-# c = [] # empty Array
-#
-# Then, as you move items(discs) between Arrays(pegs), you can't ever allow
-# a larger number occurs before a smaller one in any Array, like:
-#
-# c = [2,1] # WRONG!
-#
-# Write a method that will call itself recursively until the discs are stacked on the C peg
-# with the largest (4) on the bottom and the smallest (1) on top. So, write that method so
-# that in the end the numbers are in the same order but in Array c.
-#
- 
 # class TowerOfHanoi
 
 
@@ -170,3 +125,60 @@ tower.run(10)
 # tower = TowerOfHanoi.new
 
 # tower.move_disc(4,tower.first_peg, tower.second_peg, tower.third_peg)
+
+
+
+
+
+
+
+
+
+
+############## TEACHER NOTES #################
+
+
+
+
+# LETS GET READY TO RECURSE!!!!!!
+#
+# Tower of Hanoi
+#
+# You have 4 discs which vary in size from small to large
+# There are 3 pegs, A, B, C, respectively
+#
+# The discs are all currently on peg A, with the largest disc on the bottom,
+# and the smallest disc on the top.
+#
+#
+# |      - 1 -     |                 |                 |
+# |     -- 2 --    |                 |                 |
+# |    --- 3 ---   |                 |                 |
+# |   ---- 4 ----  |                 |                 |
+# _________A________________B_________________C_________
+#
+#
+# Get the discs from peg A to peg C.
+#
+# Rules:
+# - Only one disk may be moved at a time.
+# - Each move consists of taking the upper disk from one of the pegs and sliding
+#   it onto another peg, on top of the other disks that may already be present on that peg.
+# - No disk may be placed on top of a smaller disk (can't put disc 4 on top of disc 1).
+#
+# One method for setting this up might look like:
+#
+# a = [1,2,3,4]
+# b = [] # empty Array
+# c = [] # empty Array
+#
+# Then, as you move items(discs) between Arrays(pegs), you can't ever allow
+# a larger number occurs before a smaller one in any Array, like:
+#
+# c = [2,1] # WRONG!
+#
+# Write a method that will call itself recursively until the discs are stacked on the C peg
+# with the largest (4) on the bottom and the smallest (1) on top. So, write that method so
+# that in the end the numbers are in the same order but in Array c.
+#
+ 
