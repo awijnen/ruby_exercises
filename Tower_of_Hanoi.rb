@@ -1,16 +1,23 @@
 ### FINAL ###
 class Hanoi
-  attr_accessor :peg1, :peg2, :peg3
+  attr_accessor :peg1, :peg2, :peg3, :moves
 
   def initialize
     @peg1 = [1,2,3,4,5,6,7,8,9]
     @peg2 = []
     @peg3 = []
+    @moves = 1
   end
 
   def move_discs(n,from,to,via)
     if n == 1
       to.unshift(from.shift)
+      puts "Move number: #{@moves}"
+      puts "Peg1: #{@peg1}"
+      puts "Peg2: #{@peg2}"
+      puts "Peg3: #{@peg3}"
+      puts "--------------"
+      @moves += 1
     else
       move_discs(n-1,from,via,to)
       move_discs(1,from,to,via)
@@ -29,7 +36,7 @@ class Hanoi
 end
 
 tower = Hanoi.new
-tower.run(10)
+tower.run(4)
 
 
 
