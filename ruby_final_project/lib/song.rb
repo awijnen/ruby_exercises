@@ -7,9 +7,9 @@ class Song
     @genre
   end
 
-  def genre=(name)
-    @genre = name
-    name.songs << self
+  def genre=(genre_instance)
+    @genre = genre_instance
+    genre_instance.songs << self
   end
 
 end
