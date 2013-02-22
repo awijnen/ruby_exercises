@@ -34,8 +34,11 @@ class Artist
 
   def add_song(song)
     self.songs << song
-    self.add_genre(song)
-    song.genre.artists << self if !song.genre.artists.include?(self)
+    if song.genre != nil
+      self.add_genre(song)
+      song.genre.artists << self if !song.genre.artists.include?(self)
+    else
+    end
   end
 
 end
