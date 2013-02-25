@@ -3,6 +3,8 @@ require_relative './artist'
 
 class Song
 
+  attr_accessor :name
+
   def genre
     @genre
   end

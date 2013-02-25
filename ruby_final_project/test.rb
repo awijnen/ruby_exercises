@@ -167,17 +167,42 @@ test 'The Genre class can keep track of all created genres' do
 end
 
 # # Extra Credit
-# # Complete any song test that is pending (undefined).
-# # The functionality described must still be present to complete the assignment
-# # so even if you do not complete the pending specs, they must pass in my complete
-# # test suite. There's no way you'd be able to accomplish the site generation
-# # without your song class having this functionality, so go ahead and try
-# # to use assert and assert_equal to write some tests.
+# Complete any song test that is pending (undefined).
+# The functionality described must still be present to complete the assignment
+# so even if you do not complete the pending specs, they must pass in my complete
+# test suite. There's no way you'd be able to accomplish the site generation
+# without your song class having this functionality, so go ahead and try
+# to use assert and assert_equal to write some tests.
 
-# test 'Can initialize a song'
-# test 'A song can have a name'
-# test 'A song can have a genre'
-# test 'A song has an artist'
+test 'Can initialize a song' do 
+  song1 = Song.new
+
+  assert song1
+end
+
+
+test 'A song can have a name' do
+  song = Song.new
+  song.name = "Thunder Road"
+
+  assert_equal song.name, "Thunder Road"
+end
+
+
+test 'A song can have a genre' do
+  song = Song.new
+  song.genre = Genre.new
+  song.genre.name = 'rap'
+
+  assert_equal song.genre.name, 'rap'
+end
+
+
+test 'A song has an artist' do
+  cave = Song.new
+  cave.artist = 'Mumford'
+  assert_equal cave.artist, 'Mumford'
+end
 
 # # Part 2: Site Generation Using ERB
 # # write a ruby script that parses the data within the data directory
